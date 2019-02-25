@@ -3,10 +3,12 @@ package com.yuli.cloud.domain.model;
 
 public class Stormtrooper {
 
-    private final String id;
-    private final String planetOfOrigin;
-    private final String species;
-    private final String type;
+    private String id;
+    private String planetOfOrigin;
+    private String species;
+    private String type;
+
+    Stormtrooper() {}
 
     private Stormtrooper(String id, String planetOfOrigin, String species,
                         String type) {
@@ -31,16 +33,32 @@ public class Stormtrooper {
         return id;
     }
 
+    void setId(String id) {
+        this.id = id;
+    }
+
     public String getPlanetOfOrigin() {
         return planetOfOrigin;
+    }
+
+    void setPlanetOfOrigin(String planetOfOrigin) {
+        this.planetOfOrigin = planetOfOrigin;
     }
 
     public String getSpecies() {
         return species;
     }
 
+    void setSpecies(String species) {
+        this.species = species;
+    }
+
     public String getType() {
         return type;
+    }
+
+    void setType(String type) {
+        this.type = type;
     }
 
     public static StormtrooperBuilder getBuilder() {
